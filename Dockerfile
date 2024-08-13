@@ -4,7 +4,7 @@ WORKDIR /go/src/github.com/stolostron/insights-metrics
 COPY . .
 RUN CGO_ENABLED=1 go build -trimpath -o insights-metrics main.go
 
-FROM registry.access.redhat.com/ubi8/ubi-minimal:8.4
+FROM registry.access.redhat.com/ubi8/ubi-minimal:8.10-1052
 
 ARG VCS_REF
 ARG VCS_URL
